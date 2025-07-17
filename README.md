@@ -10,7 +10,7 @@ Tu objetivo es diseñar e implementar una API que permita gestionar productos y 
 
 Queremos que demuestres tus conocimientos técnicos, tu criterio para tomar decisiones de diseño, y tu capacidad para resolver un problema realista de backend.
 
-Puedes usar el **framework que prefieras**, la **arquitectura que consideres apropiada** y la **base de datos que mejor se adapte a tu solución**. Algunas opciones válidas incluyen Spring Boot, Quarkus, Micronaut, Java puro, PostgreSQL, MongoDB, MySQL, H2, etc.
+Puedes usar el **framework que prefieras**, la **arquitectura que consideres apropiada** y la **base de datos que mejor se adapte a tu solución**. Algunas opciones válidas incluyen Spring Boot, Quarkus, Java puro, PostgreSQL, MongoDB, MySQL, H2, etc.
 
 La implementación puede realizarse en **Java o Kotlin**.
 
