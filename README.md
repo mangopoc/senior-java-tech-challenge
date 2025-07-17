@@ -51,9 +51,34 @@ Debes implementar los siguientes endpoints:
 
 3. **Obtener el precio vigente de un producto en una fecha**
     - `GET /products/{id}/prices?date=2024-04-15`
+    - Body:
+      ```json
+      {
+        "value": 99.99
+      }
+      ```
 
 4. **Obtener el historial completo de precios de un producto**
     - `GET /products/{id}/prices`
+    - Body:
+      ```json
+      {
+        "name": "Zapatillas deportivas",
+        "description": "Modelo 2025 edición limitada",
+        "prices": [
+          {
+            "value": 99.99,
+            "initDate": "2024-01-01",
+            "endDate": "2024-06-30"
+          },
+          {
+            "value": 199.99,
+            "initDate": "2025-01-01",
+            "endDate": "2025-06-30"
+          },
+        ]
+      }
+      ```
 
 📌 **Nota**:  
 Los endpoints anteriores se utilizarán en las pruebas automáticas.  
