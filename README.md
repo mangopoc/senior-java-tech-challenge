@@ -146,7 +146,7 @@ Esto te permite aplicar estrategias como separación de servicios, caché, balan
 - Justificación de decisiones técnicas.
 - Indicaciones si agregaste mejoras, asumiste supuestos o cambiaste los endpoints.
 - Cómo ejecutar la prueba de rendimiento (si aplicaste ese desafío).
-- Para evitar copias preferimos que nos mandes un zip o nos envíes invitación de un repositorio PRIVADO de Github para los emails adrian.catalan@mango.com y jose.manzano@mango.com
+- Para evitar copias preferimos que nos mandes un zip o nos envíes invitación de un repositorio PRIVADO de Github al contacto que te pasó la prueba.
 
 ---
 
