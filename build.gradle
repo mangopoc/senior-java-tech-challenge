@@ -1,24 +1,71 @@
 plugins {
-	id 'java'
+    id 'java'
+    id 'org.springframework.boot' version '2.6.7'
+    id 'io.spring.dependency-management' version '1.0.15.RELEASE'
 }
 
 group = 'com.mango'
 version = '0.0.1-SNAPSHOT'
 
 java {
-	toolchain {
-		languageVersion = JavaLanguageVersion.of(21)
-	}
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
 }
 
 repositories {
-	mavenCentral()
+    mavenCentral()
+}
+
+ext {
+    springBootVersion = "2.6.7" // debe coincidir con el plugin
+    lombokVersion = "1.18.30"
+    mapstructVersion = "1.5.5.Final"
+    apacheCommonsVersion = "3.9"
+    clicksendVersion = "1.0.0"
+    hibernateTypesVersion = "2.10.1"
+    logbackEncoderVersion = "6.5"
+    micrometerVersion = "1.8.3"
+    jwtVersion = "3.8.3"
 }
 
 dependencies {
-	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+    // Spring Boot starters
+    implementation "org.springframework.boot:spring-boot-starter-web"
+    implementation "org.springframework.boot:spring-boot-starter-validation"
+    implementation "org.springframework.boot:spring-boot-starter-actuator"
+
+    // Lombok
+    compileOnly "org.projectlombok:lombok:$lombokVersion"
+    annotationProcessor "org.projectlombok:lombok:$lombokVersion"
+
+    // MapStruct
+    implementation "org.mapstruct:mapstruct:$mapstructVersion"
+    annotationProcessor "org.mapstruct:mapstruct-processor:$mapstructVersion"
+
+    // Otros útiles
+    implementation "org.apache.commons:commons-lang3:$apacheCommonsVersion"
+    implementation "commons-codec:commons-codec:1.13"
+    implementation "com.auth0:java-jwt:$jwtVersion"
+    implementation "io.micrometer:micrometer-registry-cloudwatch2:$micrometerVersion"
+    implementation "com.github.clicksend:clicksend-java-client:$clicksendVersion"
+    implementation "com.vladmihalcea:hibernate-types-52:$hibernateTypesVersion"
+    implementation "net.logstash.logback:logstash-logback-encoder:$logbackEncoderVersion"
+    implementation "org.springframework.boot:spring-boot-starter-actuator"
+    // Procesador de configuración Spring Boot
+    annotationProcessor "org.springframework.boot:spring-boot-configuration-processor"
+
+    // Test
+    testImplementation "org.springframework.boot:spring-boot-starter-test"
+    testImplementation "org.springframework.security:spring-security-test:5.6.3"
+    testCompileOnly "org.projectlombok:lombok:$lombokVersion"
+    testAnnotationProcessor "org.projectlombok:lombok:$lombokVersion"
+
+    testImplementation 'com.intuit.karate:karate-junit5:1.4.1'
+
+
+
 }
 
 tasks.named('test') {
-	useJUnitPlatform()
+    useJUnitPlatform()
 }
