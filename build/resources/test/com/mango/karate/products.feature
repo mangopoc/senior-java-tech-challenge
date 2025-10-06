@@ -66,4 +66,4 @@ Scenario: Attach a price to a product
     }
     """
   When method post
-  Then status 200
+  Then status 400

@@ -2,10 +2,11 @@ package com.mango.karate;
 
 import com.intuit.karate.junit5.Karate;
 import com.mango.products.ProductsApplication;
+import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ContextConfiguration;
 
 
-//@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
+//SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
 //ContextConfiguration(classes = ProductsApplication.class)
 class ProductsTest {
 

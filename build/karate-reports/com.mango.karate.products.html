@@ -38,8 +38,8 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <img src="karate-labs-logo-ring.svg" alt="Karate Labs"/>
     </a>
     <div class="nav-count">
-      <div id="nav-pass" class="bg-success">1</div>
-      <div id="nav-fail" class="bg-danger">2</div>
+      <div id="nav-pass" class="bg-success">3</div>
+      <div id="nav-fail" class="bg-danger">0</div>
     </div>
   </div>
   <div id="nav-env">
@@ -49,7 +49,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
     <div>Scenarios</div>
   </div>
   <div id="nav-date">
-    <div>2025-10-05 10:49:56 p. m.</div>
+    <div>2025-10-06 09:01:20 a. m.</div>
   </div>
 </div>
 
@@ -57,10 +57,10 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
           <div class="nav-item passed">
             <a href="#[1:2]"><span>[1:2]</span> <span>products</span></a>
           </div>
-          <div class="nav-item failed">
+          <div class="nav-item passed">
             <a href="#[2:17]"><span>[2:17]</span> <span>Attach a price to a product</span></a>
           </div>
-          <div class="nav-item failed">
+          <div class="nav-item passed">
             <a href="#[3:44]"><span>[3:44]</span> <span>Attach a price to a product with wrong date range</span></a>
           </div>
         </div>
@@ -87,7 +87,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
               </div>
             </div>
             <div class="scenario-time passed">
-              <span>ms:</span>&nbsp;<span>8650</span>
+              <span>ms:</span>&nbsp;<span>117</span>
             </div>
           </div>
           
@@ -104,7 +104,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>Given</span>&nbsp;<span>url &#39;http://localhost:8080/products&#39;</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell passed">0</div>
   </div>
 
    
@@ -132,7 +132,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>And</span>&nbsp;<span>request</span>
       </div>
     </div>
-    <div class="time-cell passed">44</div>
+    <div class="time-cell passed">25</div>
   </div>
 
    
@@ -163,7 +163,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>When</span>&nbsp;<span>method post</span>
       </div>
     </div>
-    <div class="time-cell passed">8525</div>
+    <div class="time-cell passed">64</div>
   </div>
 
    
@@ -172,7 +172,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.11">22:49:42.371 request:
+  <div class="preformatted" data-parent="0.11">09:01:20.470 request:
 1 &gt; POST http://localhost:8080/products
 1 &gt; Content-Type: application/json; charset=UTF-8
 1 &gt; Content-Length: 73
@@ -182,14 +182,14 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 1 &gt; Accept-Encoding: gzip,deflate
 {&quot;name&quot;:&quot;Zapatos deportivos&quot;,&quot;description&quot;:&quot;Calzado cómodo para correr&quot;}
 
-22:49:50.800 response time in milliseconds: 8427
+09:01:20.477 response time in milliseconds: 6
 1 &lt; 201
 1 &lt; Content-Type: application/json
 1 &lt; Transfer-Encoding: chunked
-1 &lt; Date: Sun, 05 Oct 2025 20:49:50 GMT
+1 &lt; Date: Mon, 06 Oct 2025 07:01:19 GMT
 1 &lt; Keep-Alive: timeout=60
 1 &lt; Connection: keep-alive
-{&quot;id&quot;:&quot;517b0a11-7512-482d-a29f-c4f898e45ea9&quot;,&quot;name&quot;:&quot;Zapatos deportivos&quot;,&quot;description&quot;:&quot;Calzado cómodo para correr&quot;,&quot;price&quot;:null,&quot;version&quot;:1,&quot;createdAt&quot;:&quot;2025-10-05T22:49:50.7782249&quot;,&quot;active&quot;:true}
+{&quot;id&quot;:&quot;c4160024-cd5c-4f4c-b31f-237ad29b22ba&quot;,&quot;name&quot;:&quot;Zapatos deportivos&quot;,&quot;description&quot;:&quot;Calzado cómodo para correr&quot;,&quot;price&quot;:null,&quot;version&quot;:1,&quot;createdAt&quot;:&quot;2025-10-06T09:01:20.4749307&quot;,&quot;active&quot;:true}
 
 </div>   
 
@@ -238,7 +238,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>And</span>&nbsp;<span>print response</span>
       </div>
     </div>
-    <div class="time-cell passed">79</div>
+    <div class="time-cell passed">27</div>
   </div>
 
    
@@ -247,13 +247,13 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.13">22:49:50.874 [print] {
-  &quot;id&quot;: &quot;517b0a11-7512-482d-a29f-c4f898e45ea9&quot;,
+  <div class="preformatted" data-parent="0.13">09:01:20.502 [print] {
+  &quot;id&quot;: &quot;c4160024-cd5c-4f4c-b31f-237ad29b22ba&quot;,
   &quot;name&quot;: &quot;Zapatos deportivos&quot;,
   &quot;description&quot;: &quot;Calzado cómodo para correr&quot;,
   &quot;price&quot;: null,
   &quot;version&quot;: 1,
-  &quot;createdAt&quot;: &quot;2025-10-05T22:49:50.7782249&quot;,
+  &quot;createdAt&quot;: &quot;2025-10-06T09:01:20.4749307&quot;,
   &quot;active&quot;: true
 }
  
@@ -276,8 +276,8 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
                 <span></span>
               </div>
             </div>
-            <div class="scenario-time failed">
-              <span>ms:</span>&nbsp;<span>1721</span>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>20</span>
             </div>
           </div>
           
@@ -294,7 +294,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>Given</span>&nbsp;<span>url &#39;http://localhost:8080/products&#39;</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell passed">0</div>
   </div>
 
    
@@ -322,7 +322,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>And</span>&nbsp;<span>request</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell passed">0</div>
   </div>
 
    
@@ -353,7 +353,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>When</span>&nbsp;<span>method post</span>
       </div>
     </div>
-    <div class="time-cell passed">1601</div>
+    <div class="time-cell passed">7</div>
   </div>
 
    
@@ -362,7 +362,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.26">22:49:50.953 request:
+  <div class="preformatted" data-parent="0.26">09:01:20.502 request:
 1 &gt; POST http://localhost:8080/products
 1 &gt; Content-Type: application/json; charset=UTF-8
 1 &gt; Content-Length: 73
@@ -372,14 +372,14 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 1 &gt; Accept-Encoding: gzip,deflate
 {&quot;name&quot;:&quot;Zapatos deportivos&quot;,&quot;description&quot;:&quot;Calzado cómodo para correr&quot;}
 
-22:49:52.552 response time in milliseconds: 1599
+09:01:20.518 response time in milliseconds: 16
 1 &lt; 201
 1 &lt; Content-Type: application/json
 1 &lt; Transfer-Encoding: chunked
-1 &lt; Date: Sun, 05 Oct 2025 20:49:52 GMT
+1 &lt; Date: Mon, 06 Oct 2025 07:01:19 GMT
 1 &lt; Keep-Alive: timeout=60
 1 &lt; Connection: keep-alive
-{&quot;id&quot;:&quot;ab598830-ebd7-4c51-8dd3-fc6bc38678ee&quot;,&quot;name&quot;:&quot;Zapatos deportivos&quot;,&quot;description&quot;:&quot;Calzado cómodo para correr&quot;,&quot;price&quot;:null,&quot;version&quot;:1,&quot;createdAt&quot;:&quot;2025-10-05T22:49:52.5468168&quot;,&quot;active&quot;:true}
+{&quot;id&quot;:&quot;a4d89076-2813-4000-8f96-b1dec62a3170&quot;,&quot;name&quot;:&quot;Zapatos deportivos&quot;,&quot;description&quot;:&quot;Calzado cómodo para correr&quot;,&quot;price&quot;:null,&quot;version&quot;:1,&quot;createdAt&quot;:&quot;2025-10-06T09:01:20.5020112&quot;,&quot;active&quot;:true}
 
 </div>   
 
@@ -428,7 +428,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>And</span>&nbsp;<span>def productId = response.id</span>
       </div>
     </div>
-    <div class="time-cell passed">2</div>
+    <div class="time-cell passed">1</div>
   </div>
 
    
@@ -456,7 +456,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>And</span>&nbsp;<span>print &#39;ID del producto: &#39; + productId</span>
       </div>
     </div>
-    <div class="time-cell passed">4</div>
+    <div class="time-cell passed">1</div>
   </div>
 
    
@@ -465,7 +465,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.29">22:49:52.552 [print] ID del producto: ab598830-ebd7-4c51-8dd3-fc6bc38678ee 
+  <div class="preformatted" data-parent="0.29">09:01:20.518 [print] ID del producto: a4d89076-2813-4000-8f96-b1dec62a3170 
 </div>   
 
   
@@ -485,7 +485,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>Given</span>&nbsp;<span>url &#39;http://localhost:8080/products/&#39;+productId+&#39;/prices&#39;</span>
       </div>
     </div>
-    <div class="time-cell passed">6</div>
+    <div class="time-cell passed">1</div>
   </div>
 
    
@@ -513,7 +513,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>And</span>&nbsp;<span>request</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell passed">0</div>
   </div>
 
    
@@ -545,7 +545,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>When</span>&nbsp;<span>method post</span>
       </div>
     </div>
-    <div class="time-cell passed">83</div>
+    <div class="time-cell passed">9</div>
   </div>
 
    
@@ -554,8 +554,8 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.41">22:49:52.584 request:
-2 &gt; POST http://localhost:8080/products/ab598830-ebd7-4c51-8dd3-fc6bc38678ee/prices
+  <div class="preformatted" data-parent="0.41">09:01:20.523 request:
+2 &gt; POST http://localhost:8080/products/a4d89076-2813-4000-8f96-b1dec62a3170/prices
 2 &gt; Content-Type: application/json; charset=UTF-8
 2 &gt; Content-Length: 62
 2 &gt; Host: localhost:8080
@@ -564,13 +564,13 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 2 &gt; Accept-Encoding: gzip,deflate
 {&quot;value&quot;:99.99,&quot;initDate&quot;:&quot;2024-01-01&quot;,&quot;endDate&quot;:&quot;2024-06-30&quot;}
 
-22:49:52.658 response time in milliseconds: 74
-2 &lt; 500
-2 &lt; Content-Type: application/json
-2 &lt; Transfer-Encoding: chunked
-2 &lt; Date: Sun, 05 Oct 2025 20:49:52 GMT
-2 &lt; Connection: close
-{&quot;timestamp&quot;:&quot;2025-10-05T20:49:52.652+00:00&quot;,&quot;status&quot;:500,&quot;error&quot;:&quot;Internal Server Error&quot;,&quot;path&quot;:&quot;/products/ab598830-ebd7-4c51-8dd3-fc6bc38678ee/prices&quot;}
+09:01:20.525 response time in milliseconds: 2
+2 &lt; 200
+2 &lt; Content-Length: 0
+2 &lt; Date: Mon, 06 Oct 2025 07:01:19 GMT
+2 &lt; Keep-Alive: timeout=60
+2 &lt; Connection: keep-alive
+
 
 </div>   
 
@@ -585,13 +585,13 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   <div class="step-row">
     <div class="step-container" id="0.42">
-      <div class="step-ref failed">42</div>
+      <div class="step-ref passed">42</div>
       
-      <div class="step-cell failed">
+      <div class="step-cell passed">
         <span>Then</span>&nbsp;<span>status 200</span>
       </div>
     </div>
-    <div class="time-cell failed">21</div>
+    <div class="time-cell passed">0</div>
   </div>
 
    
@@ -600,12 +600,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.42">22:49:52.679 classpath:com/mango/karate/products.feature:42
-Then status 200
-status code was: 500, expected: 200, response time in milliseconds: 74, url: http://localhost:8080/products/ab598830-ebd7-4c51-8dd3-fc6bc38678ee/prices, response: 
-{&quot;timestamp&quot;:&quot;2025-10-05T20:49:52.652+00:00&quot;,&quot;status&quot;:500,&quot;error&quot;:&quot;Internal Server Error&quot;,&quot;path&quot;:&quot;/products/ab598830-ebd7-4c51-8dd3-fc6bc38678ee/prices&quot;}
-classpath:com/mango/karate/products.feature:42
-</div>   
+     
 
   
 
@@ -624,8 +619,8 @@ classpath:com/mango/karate/products.feature:42
                 <span></span>
               </div>
             </div>
-            <div class="scenario-time failed">
-              <span>ms:</span>&nbsp;<span>3438</span>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>21</span>
             </div>
           </div>
           
@@ -670,7 +665,7 @@ classpath:com/mango/karate/products.feature:42
         <span>And</span>&nbsp;<span>request</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell passed">0</div>
   </div>
 
    
@@ -701,7 +696,7 @@ classpath:com/mango/karate/products.feature:42
         <span>When</span>&nbsp;<span>method post</span>
       </div>
     </div>
-    <div class="time-cell passed">3406</div>
+    <div class="time-cell passed">8</div>
   </div>
 
    
@@ -710,7 +705,7 @@ classpath:com/mango/karate/products.feature:42
 
   
 
-  <div class="preformatted" data-parent="0.53">22:49:52.745 request:
+  <div class="preformatted" data-parent="0.53">09:01:20.537 request:
 1 &gt; POST http://localhost:8080/products
 1 &gt; Content-Type: application/json; charset=UTF-8
 1 &gt; Content-Length: 73
@@ -720,14 +715,14 @@ classpath:com/mango/karate/products.feature:42
 1 &gt; Accept-Encoding: gzip,deflate
 {&quot;name&quot;:&quot;Zapatos deportivos&quot;,&quot;description&quot;:&quot;Calzado cómodo para correr&quot;}
 
-22:49:56.146 response time in milliseconds: 3401
+09:01:20.542 response time in milliseconds: 5
 1 &lt; 201
 1 &lt; Content-Type: application/json
 1 &lt; Transfer-Encoding: chunked
-1 &lt; Date: Sun, 05 Oct 2025 20:49:56 GMT
+1 &lt; Date: Mon, 06 Oct 2025 07:01:19 GMT
 1 &lt; Keep-Alive: timeout=60
 1 &lt; Connection: keep-alive
-{&quot;id&quot;:&quot;18331bf7-d770-452b-a9ab-287477c0c0d4&quot;,&quot;name&quot;:&quot;Zapatos deportivos&quot;,&quot;description&quot;:&quot;Calzado cómodo para correr&quot;,&quot;price&quot;:null,&quot;version&quot;:1,&quot;createdAt&quot;:&quot;2025-10-05T22:49:56.1336905&quot;,&quot;active&quot;:true}
+{&quot;id&quot;:&quot;8c310d29-e2aa-4856-b6d0-3d34e19283ed&quot;,&quot;name&quot;:&quot;Zapatos deportivos&quot;,&quot;description&quot;:&quot;Calzado cómodo para correr&quot;,&quot;price&quot;:null,&quot;version&quot;:1,&quot;createdAt&quot;:&quot;2025-10-06T09:01:20.5421127&quot;,&quot;active&quot;:true}
 
 </div>   
 
@@ -813,7 +808,7 @@ classpath:com/mango/karate/products.feature:42
 
   
 
-  <div class="preformatted" data-parent="0.56">22:49:56.149 [print] ID del producto: 18331bf7-d770-452b-a9ab-287477c0c0d4 
+  <div class="preformatted" data-parent="0.56">09:01:20.549 [print] ID del producto: 8c310d29-e2aa-4856-b6d0-3d34e19283ed 
 </div>   
 
   
@@ -833,7 +828,7 @@ classpath:com/mango/karate/products.feature:42
         <span>Given</span>&nbsp;<span>url &#39;http://localhost:8080/products/&#39;+productId+&#39;/prices&#39;</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell passed">0</div>
   </div>
 
    
@@ -861,7 +856,7 @@ classpath:com/mango/karate/products.feature:42
         <span>And</span>&nbsp;<span>request</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell passed">0</div>
   </div>
 
    
@@ -893,7 +888,7 @@ classpath:com/mango/karate/products.feature:42
         <span>When</span>&nbsp;<span>method post</span>
       </div>
     </div>
-    <div class="time-cell passed">26</div>
+    <div class="time-cell passed">9</div>
   </div>
 
    
@@ -902,8 +897,8 @@ classpath:com/mango/karate/products.feature:42
 
   
 
-  <div class="preformatted" data-parent="0.68">22:49:56.149 request:
-2 &gt; POST http://localhost:8080/products/18331bf7-d770-452b-a9ab-287477c0c0d4/prices
+  <div class="preformatted" data-parent="0.68">09:01:20.551 request:
+2 &gt; POST http://localhost:8080/products/8c310d29-e2aa-4856-b6d0-3d34e19283ed/prices
 2 &gt; Content-Type: application/json; charset=UTF-8
 2 &gt; Content-Length: 62
 2 &gt; Host: localhost:8080
@@ -912,13 +907,13 @@ classpath:com/mango/karate/products.feature:42
 2 &gt; Accept-Encoding: gzip,deflate
 {&quot;value&quot;:99.99,&quot;initDate&quot;:&quot;2025-01-01&quot;,&quot;endDate&quot;:&quot;2024-06-30&quot;}
 
-22:49:56.165 response time in milliseconds: 16
-2 &lt; 500
+09:01:20.558 response time in milliseconds: 7
+2 &lt; 400
 2 &lt; Content-Type: application/json
 2 &lt; Transfer-Encoding: chunked
-2 &lt; Date: Sun, 05 Oct 2025 20:49:56 GMT
+2 &lt; Date: Mon, 06 Oct 2025 07:01:19 GMT
 2 &lt; Connection: close
-{&quot;timestamp&quot;:&quot;2025-10-05T20:49:56.165+00:00&quot;,&quot;status&quot;:500,&quot;error&quot;:&quot;Internal Server Error&quot;,&quot;path&quot;:&quot;/products/18331bf7-d770-452b-a9ab-287477c0c0d4/prices&quot;}
+{&quot;timestamp&quot;:&quot;2025-10-06T07:01:20.555+00:00&quot;,&quot;status&quot;:400,&quot;error&quot;:&quot;Bad Request&quot;,&quot;path&quot;:&quot;/products/8c310d29-e2aa-4856-b6d0-3d34e19283ed/prices&quot;}
 
 </div>   
 
@@ -933,13 +928,13 @@ classpath:com/mango/karate/products.feature:42
 
   <div class="step-row">
     <div class="step-container" id="0.69">
-      <div class="step-ref failed">69</div>
+      <div class="step-ref passed">69</div>
       
-      <div class="step-cell failed">
-        <span>Then</span>&nbsp;<span>status 200</span>
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 400</span>
       </div>
     </div>
-    <div class="time-cell failed">0</div>
+    <div class="time-cell passed">0</div>
   </div>
 
    
@@ -948,12 +943,7 @@ classpath:com/mango/karate/products.feature:42
 
   
 
-  <div class="preformatted" data-parent="0.69">22:49:56.181 classpath:com/mango/karate/products.feature:69
-Then status 200
-status code was: 500, expected: 200, response time in milliseconds: 16, url: http://localhost:8080/products/18331bf7-d770-452b-a9ab-287477c0c0d4/prices, response: 
-{&quot;timestamp&quot;:&quot;2025-10-05T20:49:56.165+00:00&quot;,&quot;status&quot;:500,&quot;error&quot;:&quot;Internal Server Error&quot;,&quot;path&quot;:&quot;/products/18331bf7-d770-452b-a9ab-287477c0c0d4/prices&quot;}
-classpath:com/mango/karate/products.feature:69
-</div>   
+     
 
   
 
