@@ -6,7 +6,7 @@ import java.math.BigDecimal;
 import java.util.Currency;
 
 @Data
-public class Price {
+public class PriceMemoryEntity {
 
     private BigDecimal price;
 

@@ -49,7 +49,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
     <div>Scenarios</div>
   </div>
   <div id="nav-date">
-    <div>2025-10-05 10:17:07 a. m.</div>
+    <div>2025-10-05 10:49:40 p. m.</div>
   </div>
 </div>
 
@@ -81,7 +81,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
               </div>
             </div>
             <div class="scenario-time passed">
-              <span>ms:</span>&nbsp;<span>566</span>
+              <span>ms:</span>&nbsp;<span>912</span>
             </div>
           </div>
           
@@ -98,7 +98,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>Given</span>&nbsp;<span>url &#39;http://localhost:8080/actuator/health&#39;</span>
       </div>
     </div>
-    <div class="time-cell passed">132</div>
+    <div class="time-cell passed">97</div>
   </div>
 
    
@@ -126,7 +126,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>When</span>&nbsp;<span>method get</span>
       </div>
     </div>
-    <div class="time-cell passed">434</div>
+    <div class="time-cell passed">815</div>
   </div>
 
    
@@ -135,7 +135,24 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-     
+  <div class="preformatted" data-parent="0.5">22:49:40.359 request:
+1 &gt; GET http://localhost:8080/actuator/health
+1 &gt; Host: localhost:8080
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/17)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+22:49:40.752 response time in milliseconds: 393
+1 &lt; 200
+1 &lt; Content-Type: application/vnd.spring-boot.actuator.v3+json
+1 &lt; Transfer-Encoding: chunked
+1 &lt; Date: Sun, 05 Oct 2025 20:49:40 GMT
+1 &lt; Keep-Alive: timeout=60
+1 &lt; Connection: keep-alive
+{&quot;status&quot;:&quot;UP&quot;,&quot;components&quot;:{&quot;diskSpace&quot;:{&quot;status&quot;:&quot;UP&quot;,&quot;details&quot;:{&quot;total&quot;:174489731072,&quot;free&quot;:11004837888,&quot;threshold&quot;:10485760,&quot;exists&quot;:true}},&quot;ping&quot;:{&quot;status&quot;:&quot;UP&quot;}}}
+
+</div>   
 
   
 

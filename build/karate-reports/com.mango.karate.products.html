@@ -39,7 +39,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
     </a>
     <div class="nav-count">
       <div id="nav-pass" class="bg-success">1</div>
-      <div id="nav-fail" class="bg-danger">0</div>
+      <div id="nav-fail" class="bg-danger">2</div>
     </div>
   </div>
   <div id="nav-env">
@@ -49,13 +49,19 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
     <div>Scenarios</div>
   </div>
   <div id="nav-date">
-    <div>2025-10-05 10:17:09 a. m.</div>
+    <div>2025-10-05 10:49:56 p. m.</div>
   </div>
 </div>
 
         <div class="nav-container">
           <div class="nav-item passed">
             <a href="#[1:2]"><span>[1:2]</span> <span>products</span></a>
+          </div>
+          <div class="nav-item failed">
+            <a href="#[2:17]"><span>[2:17]</span> <span>Attach a price to a product</span></a>
+          </div>
+          <div class="nav-item failed">
+            <a href="#[3:44]"><span>[3:44]</span> <span>Attach a price to a product with wrong date range</span></a>
           </div>
         </div>
       </div>
@@ -65,7 +71,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
           <a href="karate-tags.html">Tags</a><span class="feature-label">|</span>
           <span class="feature-label">Feature:</span>
           <span class="feature-path">com/mango/karate/products.feature</span><span class="feature-label">|</span>
-          <span class="feature-name">Prueba del endpoint /products</span>
+          <span class="feature-name">Create product endpoint /products</span>
           <span class="feature-description"></span>
         </div>
         <div class="scenario">
@@ -81,7 +87,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
               </div>
             </div>
             <div class="scenario-time passed">
-              <span>ms:</span>&nbsp;<span>247</span>
+              <span>ms:</span>&nbsp;<span>8650</span>
             </div>
           </div>
           
@@ -126,7 +132,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>And</span>&nbsp;<span>request</span>
       </div>
     </div>
-    <div class="time-cell passed">37</div>
+    <div class="time-cell passed">44</div>
   </div>
 
    
@@ -150,14 +156,61 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   
 
   <div class="step-row">
-    <div class="step-container" id="0.12">
-      <div class="step-ref passed">12</div>
+    <div class="step-container" id="0.11">
+      <div class="step-ref passed">11</div>
       
       <div class="step-cell passed">
         <span>When</span>&nbsp;<span>method post</span>
       </div>
     </div>
-    <div class="time-cell passed">209</div>
+    <div class="time-cell passed">8525</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.11">22:49:42.371 request:
+1 &gt; POST http://localhost:8080/products
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 73
+1 &gt; Host: localhost:8080
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/17)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;name&quot;:&quot;Zapatos deportivos&quot;,&quot;description&quot;:&quot;Calzado cómodo para correr&quot;}
+
+22:49:50.800 response time in milliseconds: 8427
+1 &lt; 201
+1 &lt; Content-Type: application/json
+1 &lt; Transfer-Encoding: chunked
+1 &lt; Date: Sun, 05 Oct 2025 20:49:50 GMT
+1 &lt; Keep-Alive: timeout=60
+1 &lt; Connection: keep-alive
+{&quot;id&quot;:&quot;517b0a11-7512-482d-a29f-c4f898e45ea9&quot;,&quot;name&quot;:&quot;Zapatos deportivos&quot;,&quot;description&quot;:&quot;Calzado cómodo para correr&quot;,&quot;price&quot;:null,&quot;version&quot;:1,&quot;createdAt&quot;:&quot;2025-10-05T22:49:50.7782249&quot;,&quot;active&quot;:true}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.12">
+      <div class="step-ref passed">12</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 201</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
   </div>
 
    
@@ -182,6 +235,168 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref passed">13</div>
       
       <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>print response</span>
+      </div>
+    </div>
+    <div class="time-cell passed">79</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.13">22:49:50.874 [print] {
+  &quot;id&quot;: &quot;517b0a11-7512-482d-a29f-c4f898e45ea9&quot;,
+  &quot;name&quot;: &quot;Zapatos deportivos&quot;,
+  &quot;description&quot;: &quot;Calzado cómodo para correr&quot;,
+  &quot;price&quot;: null,
+  &quot;version&quot;: 1,
+  &quot;createdAt&quot;: &quot;2025-10-05T22:49:50.7782249&quot;,
+  &quot;active&quot;: true
+}
+ 
+</div>   
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[2:17]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[2:17]</span>
+                <span class="scenario-name">Attach a price to a product</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>1721</span>
+            </div>
+          </div>
+          
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.18">
+      <div class="step-ref passed">18</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>url &#39;http://localhost:8080/products&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.19">
+      <div class="step-ref passed">19</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  <div class="preformatted" data-parent="0.19">{
+  &quot;name&quot;: &quot;Zapatos deportivos&quot;,
+  &quot;description&quot;: &quot;Calzado cómodo para correr&quot;
+}</div>
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.26">
+      <div class="step-ref passed">26</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method post</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1601</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.26">22:49:50.953 request:
+1 &gt; POST http://localhost:8080/products
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 73
+1 &gt; Host: localhost:8080
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/17)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;name&quot;:&quot;Zapatos deportivos&quot;,&quot;description&quot;:&quot;Calzado cómodo para correr&quot;}
+
+22:49:52.552 response time in milliseconds: 1599
+1 &lt; 201
+1 &lt; Content-Type: application/json
+1 &lt; Transfer-Encoding: chunked
+1 &lt; Date: Sun, 05 Oct 2025 20:49:52 GMT
+1 &lt; Keep-Alive: timeout=60
+1 &lt; Connection: keep-alive
+{&quot;id&quot;:&quot;ab598830-ebd7-4c51-8dd3-fc6bc38678ee&quot;,&quot;name&quot;:&quot;Zapatos deportivos&quot;,&quot;description&quot;:&quot;Calzado cómodo para correr&quot;,&quot;price&quot;:null,&quot;version&quot;:1,&quot;createdAt&quot;:&quot;2025-10-05T22:49:52.5468168&quot;,&quot;active&quot;:true}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.27">
+      <div class="step-ref passed">27</div>
+      
+      <div class="step-cell passed">
         <span>Then</span>&nbsp;<span>status 201</span>
       </div>
     </div>
@@ -195,6 +410,550 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   
 
      
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.28">
+      <div class="step-ref passed">28</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>def productId = response.id</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.29">
+      <div class="step-ref passed">29</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>print &#39;ID del producto: &#39; + productId</span>
+      </div>
+    </div>
+    <div class="time-cell passed">4</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.29">22:49:52.552 [print] ID del producto: ab598830-ebd7-4c51-8dd3-fc6bc38678ee 
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.32">
+      <div class="step-ref passed">32</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>url &#39;http://localhost:8080/products/&#39;+productId+&#39;/prices&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">6</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.33">
+      <div class="step-ref passed">33</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  <div class="preformatted" data-parent="0.33">{
+  &quot;value&quot;: 99.99,
+  &quot;initDate&quot;: &quot;2024-01-01&quot;,
+  &quot;endDate&quot;: &quot;2024-06-30&quot;
+}</div>
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.41">
+      <div class="step-ref passed">41</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method post</span>
+      </div>
+    </div>
+    <div class="time-cell passed">83</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.41">22:49:52.584 request:
+2 &gt; POST http://localhost:8080/products/ab598830-ebd7-4c51-8dd3-fc6bc38678ee/prices
+2 &gt; Content-Type: application/json; charset=UTF-8
+2 &gt; Content-Length: 62
+2 &gt; Host: localhost:8080
+2 &gt; Connection: Keep-Alive
+2 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/17)
+2 &gt; Accept-Encoding: gzip,deflate
+{&quot;value&quot;:99.99,&quot;initDate&quot;:&quot;2024-01-01&quot;,&quot;endDate&quot;:&quot;2024-06-30&quot;}
+
+22:49:52.658 response time in milliseconds: 74
+2 &lt; 500
+2 &lt; Content-Type: application/json
+2 &lt; Transfer-Encoding: chunked
+2 &lt; Date: Sun, 05 Oct 2025 20:49:52 GMT
+2 &lt; Connection: close
+{&quot;timestamp&quot;:&quot;2025-10-05T20:49:52.652+00:00&quot;,&quot;status&quot;:500,&quot;error&quot;:&quot;Internal Server Error&quot;,&quot;path&quot;:&quot;/products/ab598830-ebd7-4c51-8dd3-fc6bc38678ee/prices&quot;}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.42">
+      <div class="step-ref failed">42</div>
+      
+      <div class="step-cell failed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell failed">21</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.42">22:49:52.679 classpath:com/mango/karate/products.feature:42
+Then status 200
+status code was: 500, expected: 200, response time in milliseconds: 74, url: http://localhost:8080/products/ab598830-ebd7-4c51-8dd3-fc6bc38678ee/prices, response: 
+{&quot;timestamp&quot;:&quot;2025-10-05T20:49:52.652+00:00&quot;,&quot;status&quot;:500,&quot;error&quot;:&quot;Internal Server Error&quot;,&quot;path&quot;:&quot;/products/ab598830-ebd7-4c51-8dd3-fc6bc38678ee/prices&quot;}
+classpath:com/mango/karate/products.feature:42
+</div>   
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[3:44]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[3:44]</span>
+                <span class="scenario-name">Attach a price to a product with wrong date range</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>3438</span>
+            </div>
+          </div>
+          
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.45">
+      <div class="step-ref passed">45</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>url &#39;http://localhost:8080/products&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.46">
+      <div class="step-ref passed">46</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  <div class="preformatted" data-parent="0.46">{
+  &quot;name&quot;: &quot;Zapatos deportivos&quot;,
+  &quot;description&quot;: &quot;Calzado cómodo para correr&quot;
+}</div>
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.53">
+      <div class="step-ref passed">53</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method post</span>
+      </div>
+    </div>
+    <div class="time-cell passed">3406</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.53">22:49:52.745 request:
+1 &gt; POST http://localhost:8080/products
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 73
+1 &gt; Host: localhost:8080
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/17)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;name&quot;:&quot;Zapatos deportivos&quot;,&quot;description&quot;:&quot;Calzado cómodo para correr&quot;}
+
+22:49:56.146 response time in milliseconds: 3401
+1 &lt; 201
+1 &lt; Content-Type: application/json
+1 &lt; Transfer-Encoding: chunked
+1 &lt; Date: Sun, 05 Oct 2025 20:49:56 GMT
+1 &lt; Keep-Alive: timeout=60
+1 &lt; Connection: keep-alive
+{&quot;id&quot;:&quot;18331bf7-d770-452b-a9ab-287477c0c0d4&quot;,&quot;name&quot;:&quot;Zapatos deportivos&quot;,&quot;description&quot;:&quot;Calzado cómodo para correr&quot;,&quot;price&quot;:null,&quot;version&quot;:1,&quot;createdAt&quot;:&quot;2025-10-05T22:49:56.1336905&quot;,&quot;active&quot;:true}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.54">
+      <div class="step-ref passed">54</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 201</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.55">
+      <div class="step-ref passed">55</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>def productId = response.id</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.56">
+      <div class="step-ref passed">56</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>print &#39;ID del producto: &#39; + productId</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.56">22:49:56.149 [print] ID del producto: 18331bf7-d770-452b-a9ab-287477c0c0d4 
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.59">
+      <div class="step-ref passed">59</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>url &#39;http://localhost:8080/products/&#39;+productId+&#39;/prices&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.60">
+      <div class="step-ref passed">60</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  <div class="preformatted" data-parent="0.60">{
+  &quot;value&quot;: 99.99,
+  &quot;initDate&quot;: &quot;2025-01-01&quot;,
+  &quot;endDate&quot;: &quot;2024-06-30&quot;
+}</div>
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.68">
+      <div class="step-ref passed">68</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method post</span>
+      </div>
+    </div>
+    <div class="time-cell passed">26</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.68">22:49:56.149 request:
+2 &gt; POST http://localhost:8080/products/18331bf7-d770-452b-a9ab-287477c0c0d4/prices
+2 &gt; Content-Type: application/json; charset=UTF-8
+2 &gt; Content-Length: 62
+2 &gt; Host: localhost:8080
+2 &gt; Connection: Keep-Alive
+2 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/17)
+2 &gt; Accept-Encoding: gzip,deflate
+{&quot;value&quot;:99.99,&quot;initDate&quot;:&quot;2025-01-01&quot;,&quot;endDate&quot;:&quot;2024-06-30&quot;}
+
+22:49:56.165 response time in milliseconds: 16
+2 &lt; 500
+2 &lt; Content-Type: application/json
+2 &lt; Transfer-Encoding: chunked
+2 &lt; Date: Sun, 05 Oct 2025 20:49:56 GMT
+2 &lt; Connection: close
+{&quot;timestamp&quot;:&quot;2025-10-05T20:49:56.165+00:00&quot;,&quot;status&quot;:500,&quot;error&quot;:&quot;Internal Server Error&quot;,&quot;path&quot;:&quot;/products/18331bf7-d770-452b-a9ab-287477c0c0d4/prices&quot;}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.69">
+      <div class="step-ref failed">69</div>
+      
+      <div class="step-cell failed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.69">22:49:56.181 classpath:com/mango/karate/products.feature:69
+Then status 200
+status code was: 500, expected: 200, response time in milliseconds: 16, url: http://localhost:8080/products/18331bf7-d770-452b-a9ab-287477c0c0d4/prices, response: 
+{&quot;timestamp&quot;:&quot;2025-10-05T20:49:56.165+00:00&quot;,&quot;status&quot;:500,&quot;error&quot;:&quot;Internal Server Error&quot;,&quot;path&quot;:&quot;/products/18331bf7-d770-452b-a9ab-287477c0c0d4/prices&quot;}
+classpath:com/mango/karate/products.feature:69
+</div>   
 
   
 

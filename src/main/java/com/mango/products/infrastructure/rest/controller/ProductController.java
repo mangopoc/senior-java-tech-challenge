@@ -3,6 +3,7 @@ package com.mango.products.infrastructure.rest.controller;
 import com.mango.products.application.usecase.AddPriceToProductUseCase;
 import com.mango.products.application.usecase.CreateProductUseCase;
 import com.mango.products.application.usecase.FindPriceFromProductUseCase;
+import com.mango.products.domain.Product;
 import com.mango.products.infrastructure.rest.dto.PriceDto;
 import com.mango.products.infrastructure.rest.dto.PriceValueDto;
 import com.mango.products.infrastructure.rest.dto.ProductDto;
@@ -38,16 +39,15 @@ public class ProductController {
     private PriceMapper priceMapper;
 
     @PostMapping
-    public ResponseEntity<Void> createProduct(@RequestBody @Valid ProductDto dto) {
+    public ResponseEntity<ProductDto> createProduct(@RequestBody @Valid ProductDto dto) {
         log.debug("Create a Product: {}", dto);
-        createProductUseCase.create(productMapper.toDomain(dto));
-        return ResponseEntity.status(HttpStatus.CREATED).build();
+        return ResponseEntity.status(HttpStatus.CREATED).body(productMapper.toDto(createProductUseCase.create(productMapper.toDomain(dto))));
     }
 
     @PostMapping("/{id}/prices")
     public ResponseEntity<Void> addPrice(@PathVariable UUID id, @RequestBody @Valid PriceDto dto) {
-        addPriceUseCase.add(id, priceMapper.toDomain(dto));
-        return ResponseEntity.status(HttpStatus.CREATED).build();
+        addPriceUseCase.addPriceToProduct(id, priceMapper.toDomain(dto));
+        return ResponseEntity.status(HttpStatus.OK).build();
     }
 
     @GetMapping("/{id}/prices")

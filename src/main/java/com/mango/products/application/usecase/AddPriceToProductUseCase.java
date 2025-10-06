@@ -7,5 +7,5 @@ import java.util.UUID;
 
 
 public interface AddPriceToProductUseCase {
-    void add(UUID id, Price price);
+    void addPriceToProduct(UUID id, Price price);
 }

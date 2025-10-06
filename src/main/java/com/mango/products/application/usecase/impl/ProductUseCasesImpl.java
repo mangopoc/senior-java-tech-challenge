@@ -6,6 +6,7 @@ import com.mango.products.application.usecase.CreateProductUseCase;
 import com.mango.products.application.usecase.FindPriceFromProductUseCase;
 import com.mango.products.domain.Price;
 import com.mango.products.domain.Product;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
@@ -14,16 +15,19 @@ import java.util.UUID;
 @Service
 public class ProductUseCasesImpl implements CreateProductUseCase, AddPriceToProductUseCase, FindPriceFromProductUseCase {
 
+    @Autowired
     private PersistencePort persistencePort;
 
     @Override
-    public void add(UUID id, Price price) {
-
+    public void addPriceToProduct(UUID id, Price price) {
+        Product product = persistencePort.findById(id);
+        product.setPrice(price);
+        persistencePort.update(product);
     }
 
     @Override
     public Product create(Product product) {
-        return null;
+        return persistencePort.create(product);
     }
 
     @Override
