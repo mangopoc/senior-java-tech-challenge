@@ -61,9 +61,6 @@ dependencies {
     testAnnotationProcessor "org.projectlombok:lombok:$lombokVersion"
 
     testImplementation 'com.intuit.karate:karate-junit5:1.4.1'
-
-
-
 }
 
 tasks.named('test') {

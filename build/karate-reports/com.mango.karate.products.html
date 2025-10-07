@@ -38,7 +38,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <img src="karate-labs-logo-ring.svg" alt="Karate Labs"/>
     </a>
     <div class="nav-count">
-      <div id="nav-pass" class="bg-success">3</div>
+      <div id="nav-pass" class="bg-success">4</div>
       <div id="nav-fail" class="bg-danger">0</div>
     </div>
   </div>
@@ -49,19 +49,22 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
     <div>Scenarios</div>
   </div>
   <div id="nav-date">
-    <div>2025-10-06 09:01:20 a. m.</div>
+    <div>2025-10-07 10:26:49 p. m.</div>
   </div>
 </div>
 
         <div class="nav-container">
           <div class="nav-item passed">
-            <a href="#[1:2]"><span>[1:2]</span> <span>products</span></a>
+            <a href="#[1:4]"><span>[1:4]</span> <span>products</span></a>
           </div>
           <div class="nav-item passed">
-            <a href="#[2:17]"><span>[2:17]</span> <span>Attach a price to a product</span></a>
+            <a href="#[2:18]"><span>[2:18]</span> <span>Attach a price to a product</span></a>
           </div>
           <div class="nav-item passed">
-            <a href="#[3:44]"><span>[3:44]</span> <span>Attach a price to a product with wrong date range</span></a>
+            <a href="#[3:46]"><span>[3:46]</span> <span>Attach a price to a product with wrong date range</span></a>
+          </div>
+          <div class="nav-item passed">
+            <a href="#[4:73]"><span>[4:73]</span> <span>Get Prices</span></a>
           </div>
         </div>
       </div>
@@ -75,19 +78,19 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
           <span class="feature-description"></span>
         </div>
         <div class="scenario">
-          <div class="scenario-heading" id="[1:2]">
+          <div class="scenario-heading" id="[1:4]">
             <div class="heading-container">
               <div class="scenario-tags">
                 
               </div>
               <div class="scenario-keyword">
-                Scenario: <span>[1:2]</span>
+                Scenario: <span>[1:4]</span>
                 <span class="scenario-name">products</span>
                 <span></span>
               </div>
             </div>
             <div class="scenario-time passed">
-              <span>ms:</span>&nbsp;<span>117</span>
+              <span>ms:</span>&nbsp;<span>187</span>
             </div>
           </div>
           
@@ -97,14 +100,14 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   
 
   <div class="step-row">
-    <div class="step-container" id="0.3">
-      <div class="step-ref passed">3</div>
+    <div class="step-container" id="0.6">
+      <div class="step-ref passed">6</div>
       
       <div class="step-cell passed">
         <span>Given</span>&nbsp;<span>url &#39;http://localhost:8080/products&#39;</span>
       </div>
     </div>
-    <div class="time-cell passed">0</div>
+    <div class="time-cell passed">1</div>
   </div>
 
    
@@ -125,19 +128,19 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   
 
   <div class="step-row">
-    <div class="step-container" id="0.4">
-      <div class="step-ref passed">4</div>
+    <div class="step-container" id="0.7">
+      <div class="step-ref passed">7</div>
       
       <div class="step-cell passed">
         <span>And</span>&nbsp;<span>request</span>
       </div>
     </div>
-    <div class="time-cell passed">25</div>
+    <div class="time-cell passed">23</div>
   </div>
 
    
   
-  <div class="preformatted" data-parent="0.4">{
+  <div class="preformatted" data-parent="0.7">{
   &quot;name&quot;: &quot;Zapatos deportivos&quot;,
   &quot;description&quot;: &quot;Calzado cómodo para correr&quot;
 }</div>
@@ -156,14 +159,14 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   
 
   <div class="step-row">
-    <div class="step-container" id="0.11">
-      <div class="step-ref passed">11</div>
+    <div class="step-container" id="0.14">
+      <div class="step-ref passed">14</div>
       
       <div class="step-cell passed">
         <span>When</span>&nbsp;<span>method post</span>
       </div>
     </div>
-    <div class="time-cell passed">64</div>
+    <div class="time-cell passed">162</div>
   </div>
 
    
@@ -172,26 +175,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.11">09:01:20.470 request:
-1 &gt; POST http://localhost:8080/products
-1 &gt; Content-Type: application/json; charset=UTF-8
-1 &gt; Content-Length: 73
-1 &gt; Host: localhost:8080
-1 &gt; Connection: Keep-Alive
-1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/17)
-1 &gt; Accept-Encoding: gzip,deflate
-{&quot;name&quot;:&quot;Zapatos deportivos&quot;,&quot;description&quot;:&quot;Calzado cómodo para correr&quot;}
-
-09:01:20.477 response time in milliseconds: 6
-1 &lt; 201
-1 &lt; Content-Type: application/json
-1 &lt; Transfer-Encoding: chunked
-1 &lt; Date: Mon, 06 Oct 2025 07:01:19 GMT
-1 &lt; Keep-Alive: timeout=60
-1 &lt; Connection: keep-alive
-{&quot;id&quot;:&quot;c4160024-cd5c-4f4c-b31f-237ad29b22ba&quot;,&quot;name&quot;:&quot;Zapatos deportivos&quot;,&quot;description&quot;:&quot;Calzado cómodo para correr&quot;,&quot;price&quot;:null,&quot;version&quot;:1,&quot;createdAt&quot;:&quot;2025-10-06T09:01:20.4749307&quot;,&quot;active&quot;:true}
-
-</div>   
+     
 
   
 
@@ -203,8 +187,8 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   
 
   <div class="step-row">
-    <div class="step-container" id="0.12">
-      <div class="step-ref passed">12</div>
+    <div class="step-container" id="0.15">
+      <div class="step-ref passed">15</div>
       
       <div class="step-cell passed">
         <span>Then</span>&nbsp;<span>status 201</span>
@@ -225,59 +209,21 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
 </div>
 </div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.13">
-      <div class="step-ref passed">13</div>
-      
-      <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>print response</span>
-      </div>
-    </div>
-    <div class="time-cell passed">27</div>
-  </div>
-
-   
-  
-  
-
-  
-
-  <div class="preformatted" data-parent="0.13">09:01:20.502 [print] {
-  &quot;id&quot;: &quot;c4160024-cd5c-4f4c-b31f-237ad29b22ba&quot;,
-  &quot;name&quot;: &quot;Zapatos deportivos&quot;,
-  &quot;description&quot;: &quot;Calzado cómodo para correr&quot;,
-  &quot;price&quot;: null,
-  &quot;version&quot;: 1,
-  &quot;createdAt&quot;: &quot;2025-10-06T09:01:20.4749307&quot;,
-  &quot;active&quot;: true
-}
- 
-</div>   
-
-  
-
-</div>
-</div>
         </div>
         <div class="scenario">
-          <div class="scenario-heading" id="[2:17]">
+          <div class="scenario-heading" id="[2:18]">
             <div class="heading-container">
               <div class="scenario-tags">
                 
               </div>
               <div class="scenario-keyword">
-                Scenario: <span>[2:17]</span>
+                Scenario: <span>[2:18]</span>
                 <span class="scenario-name">Attach a price to a product</span>
                 <span></span>
               </div>
             </div>
             <div class="scenario-time passed">
-              <span>ms:</span>&nbsp;<span>20</span>
+              <span>ms:</span>&nbsp;<span>152</span>
             </div>
           </div>
           
@@ -287,8 +233,8 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   
 
   <div class="step-row">
-    <div class="step-container" id="0.18">
-      <div class="step-ref passed">18</div>
+    <div class="step-container" id="0.19">
+      <div class="step-ref passed">19</div>
       
       <div class="step-cell passed">
         <span>Given</span>&nbsp;<span>url &#39;http://localhost:8080/products&#39;</span>
@@ -315,8 +261,8 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   
 
   <div class="step-row">
-    <div class="step-container" id="0.19">
-      <div class="step-ref passed">19</div>
+    <div class="step-container" id="0.20">
+      <div class="step-ref passed">20</div>
       
       <div class="step-cell passed">
         <span>And</span>&nbsp;<span>request</span>
@@ -327,7 +273,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
    
   
-  <div class="preformatted" data-parent="0.19">{
+  <div class="preformatted" data-parent="0.20">{
   &quot;name&quot;: &quot;Zapatos deportivos&quot;,
   &quot;description&quot;: &quot;Calzado cómodo para correr&quot;
 }</div>
@@ -335,53 +281,6 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   
 
      
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.26">
-      <div class="step-ref passed">26</div>
-      
-      <div class="step-cell passed">
-        <span>When</span>&nbsp;<span>method post</span>
-      </div>
-    </div>
-    <div class="time-cell passed">7</div>
-  </div>
-
-   
-  
-  
-
-  
-
-  <div class="preformatted" data-parent="0.26">09:01:20.502 request:
-1 &gt; POST http://localhost:8080/products
-1 &gt; Content-Type: application/json; charset=UTF-8
-1 &gt; Content-Length: 73
-1 &gt; Host: localhost:8080
-1 &gt; Connection: Keep-Alive
-1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/17)
-1 &gt; Accept-Encoding: gzip,deflate
-{&quot;name&quot;:&quot;Zapatos deportivos&quot;,&quot;description&quot;:&quot;Calzado cómodo para correr&quot;}
-
-09:01:20.518 response time in milliseconds: 16
-1 &lt; 201
-1 &lt; Content-Type: application/json
-1 &lt; Transfer-Encoding: chunked
-1 &lt; Date: Mon, 06 Oct 2025 07:01:19 GMT
-1 &lt; Keep-Alive: timeout=60
-1 &lt; Connection: keep-alive
-{&quot;id&quot;:&quot;a4d89076-2813-4000-8f96-b1dec62a3170&quot;,&quot;name&quot;:&quot;Zapatos deportivos&quot;,&quot;description&quot;:&quot;Calzado cómodo para correr&quot;,&quot;price&quot;:null,&quot;version&quot;:1,&quot;createdAt&quot;:&quot;2025-10-06T09:01:20.5020112&quot;,&quot;active&quot;:true}
-
-</div>   
 
   
 
@@ -397,10 +296,10 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref passed">27</div>
       
       <div class="step-cell passed">
-        <span>Then</span>&nbsp;<span>status 201</span>
+        <span>When</span>&nbsp;<span>method post</span>
       </div>
     </div>
-    <div class="time-cell passed">0</div>
+    <div class="time-cell passed">8</div>
   </div>
 
    
@@ -425,10 +324,10 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref passed">28</div>
       
       <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>def productId = response.id</span>
+        <span>Then</span>&nbsp;<span>status 201</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell passed">0</div>
   </div>
 
    
@@ -453,7 +352,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref passed">29</div>
       
       <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>print &#39;ID del producto: &#39; + productId</span>
+        <span>And</span>&nbsp;<span>def productId = response.id</span>
       </div>
     </div>
     <div class="time-cell passed">1</div>
@@ -465,7 +364,35 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.29">09:01:20.518 [print] ID del producto: a4d89076-2813-4000-8f96-b1dec62a3170 
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.30">
+      <div class="step-ref passed">30</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>print &#39;ID del producto: &#39; + productId</span>
+      </div>
+    </div>
+    <div class="time-cell passed">35</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.30">22:26:49.321 [print] ID del producto: 0c0b5fb0-ddf8-42dc-b61c-01843c305d72 
 </div>   
 
   
@@ -478,8 +405,8 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   
 
   <div class="step-row">
-    <div class="step-container" id="0.32">
-      <div class="step-ref passed">32</div>
+    <div class="step-container" id="0.33">
+      <div class="step-ref passed">33</div>
       
       <div class="step-cell passed">
         <span>Given</span>&nbsp;<span>url &#39;http://localhost:8080/products/&#39;+productId+&#39;/prices&#39;</span>
@@ -506,8 +433,8 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   
 
   <div class="step-row">
-    <div class="step-container" id="0.33">
-      <div class="step-ref passed">33</div>
+    <div class="step-container" id="0.34">
+      <div class="step-ref passed">34</div>
       
       <div class="step-cell passed">
         <span>And</span>&nbsp;<span>request</span>
@@ -518,7 +445,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
    
   
-  <div class="preformatted" data-parent="0.33">{
+  <div class="preformatted" data-parent="0.34">{
   &quot;value&quot;: 99.99,
   &quot;initDate&quot;: &quot;2024-01-01&quot;,
   &quot;endDate&quot;: &quot;2024-06-30&quot;
@@ -538,14 +465,14 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   
 
   <div class="step-row">
-    <div class="step-container" id="0.41">
-      <div class="step-ref passed">41</div>
+    <div class="step-container" id="0.42">
+      <div class="step-ref passed">42</div>
       
       <div class="step-cell passed">
         <span>When</span>&nbsp;<span>method post</span>
       </div>
     </div>
-    <div class="time-cell passed">9</div>
+    <div class="time-cell passed">106</div>
   </div>
 
    
@@ -554,25 +481,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.41">09:01:20.523 request:
-2 &gt; POST http://localhost:8080/products/a4d89076-2813-4000-8f96-b1dec62a3170/prices
-2 &gt; Content-Type: application/json; charset=UTF-8
-2 &gt; Content-Length: 62
-2 &gt; Host: localhost:8080
-2 &gt; Connection: Keep-Alive
-2 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/17)
-2 &gt; Accept-Encoding: gzip,deflate
-{&quot;value&quot;:99.99,&quot;initDate&quot;:&quot;2024-01-01&quot;,&quot;endDate&quot;:&quot;2024-06-30&quot;}
-
-09:01:20.525 response time in milliseconds: 2
-2 &lt; 200
-2 &lt; Content-Length: 0
-2 &lt; Date: Mon, 06 Oct 2025 07:01:19 GMT
-2 &lt; Keep-Alive: timeout=60
-2 &lt; Connection: keep-alive
-
-
-</div>   
+     
 
   
 
@@ -584,8 +493,8 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   
 
   <div class="step-row">
-    <div class="step-container" id="0.42">
-      <div class="step-ref passed">42</div>
+    <div class="step-container" id="0.43">
+      <div class="step-ref passed">43</div>
       
       <div class="step-cell passed">
         <span>Then</span>&nbsp;<span>status 200</span>
@@ -608,19 +517,19 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 </div>
         </div>
         <div class="scenario">
-          <div class="scenario-heading" id="[3:44]">
+          <div class="scenario-heading" id="[3:46]">
             <div class="heading-container">
               <div class="scenario-tags">
                 
               </div>
               <div class="scenario-keyword">
-                Scenario: <span>[3:44]</span>
+                Scenario: <span>[3:46]</span>
                 <span class="scenario-name">Attach a price to a product with wrong date range</span>
                 <span></span>
               </div>
             </div>
             <div class="scenario-time passed">
-              <span>ms:</span>&nbsp;<span>21</span>
+              <span>ms:</span>&nbsp;<span>46</span>
             </div>
           </div>
           
@@ -630,8 +539,8 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   
 
   <div class="step-row">
-    <div class="step-container" id="0.45">
-      <div class="step-ref passed">45</div>
+    <div class="step-container" id="0.47">
+      <div class="step-ref passed">47</div>
       
       <div class="step-cell passed">
         <span>Given</span>&nbsp;<span>url &#39;http://localhost:8080/products&#39;</span>
@@ -658,8 +567,8 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   
 
   <div class="step-row">
-    <div class="step-container" id="0.46">
-      <div class="step-ref passed">46</div>
+    <div class="step-container" id="0.48">
+      <div class="step-ref passed">48</div>
       
       <div class="step-cell passed">
         <span>And</span>&nbsp;<span>request</span>
@@ -670,7 +579,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
    
   
-  <div class="preformatted" data-parent="0.46">{
+  <div class="preformatted" data-parent="0.48">{
   &quot;name&quot;: &quot;Zapatos deportivos&quot;,
   &quot;description&quot;: &quot;Calzado cómodo para correr&quot;
 }</div>
@@ -689,8 +598,8 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   
 
   <div class="step-row">
-    <div class="step-container" id="0.53">
-      <div class="step-ref passed">53</div>
+    <div class="step-container" id="0.55">
+      <div class="step-ref passed">55</div>
       
       <div class="step-cell passed">
         <span>When</span>&nbsp;<span>method post</span>
@@ -705,26 +614,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.53">09:01:20.537 request:
-1 &gt; POST http://localhost:8080/products
-1 &gt; Content-Type: application/json; charset=UTF-8
-1 &gt; Content-Length: 73
-1 &gt; Host: localhost:8080
-1 &gt; Connection: Keep-Alive
-1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/17)
-1 &gt; Accept-Encoding: gzip,deflate
-{&quot;name&quot;:&quot;Zapatos deportivos&quot;,&quot;description&quot;:&quot;Calzado cómodo para correr&quot;}
-
-09:01:20.542 response time in milliseconds: 5
-1 &lt; 201
-1 &lt; Content-Type: application/json
-1 &lt; Transfer-Encoding: chunked
-1 &lt; Date: Mon, 06 Oct 2025 07:01:19 GMT
-1 &lt; Keep-Alive: timeout=60
-1 &lt; Connection: keep-alive
-{&quot;id&quot;:&quot;8c310d29-e2aa-4856-b6d0-3d34e19283ed&quot;,&quot;name&quot;:&quot;Zapatos deportivos&quot;,&quot;description&quot;:&quot;Calzado cómodo para correr&quot;,&quot;price&quot;:null,&quot;version&quot;:1,&quot;createdAt&quot;:&quot;2025-10-06T09:01:20.5421127&quot;,&quot;active&quot;:true}
-
-</div>   
+     
 
   
 
@@ -736,8 +626,8 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   
 
   <div class="step-row">
-    <div class="step-container" id="0.54">
-      <div class="step-ref passed">54</div>
+    <div class="step-container" id="0.56">
+      <div class="step-ref passed">56</div>
       
       <div class="step-cell passed">
         <span>Then</span>&nbsp;<span>status 201</span>
@@ -764,14 +654,14 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   
 
   <div class="step-row">
-    <div class="step-container" id="0.55">
-      <div class="step-ref passed">55</div>
+    <div class="step-container" id="0.57">
+      <div class="step-ref passed">57</div>
       
       <div class="step-cell passed">
         <span>And</span>&nbsp;<span>def productId = response.id</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell passed">0</div>
   </div>
 
    
@@ -792,8 +682,8 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   
 
   <div class="step-row">
-    <div class="step-container" id="0.56">
-      <div class="step-ref passed">56</div>
+    <div class="step-container" id="0.58">
+      <div class="step-ref passed">58</div>
       
       <div class="step-cell passed">
         <span>And</span>&nbsp;<span>print &#39;ID del producto: &#39; + productId</span>
@@ -808,7 +698,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.56">09:01:20.549 [print] ID del producto: 8c310d29-e2aa-4856-b6d0-3d34e19283ed 
+  <div class="preformatted" data-parent="0.58">22:26:49.450 [print] ID del producto: 707f3171-28b3-4b12-aa8a-b057cf5fe7ca 
 </div>   
 
   
@@ -821,8 +711,8 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   
 
   <div class="step-row">
-    <div class="step-container" id="0.59">
-      <div class="step-ref passed">59</div>
+    <div class="step-container" id="0.60">
+      <div class="step-ref passed">60</div>
       
       <div class="step-cell passed">
         <span>Given</span>&nbsp;<span>url &#39;http://localhost:8080/products/&#39;+productId+&#39;/prices&#39;</span>
@@ -849,8 +739,8 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   
 
   <div class="step-row">
-    <div class="step-container" id="0.60">
-      <div class="step-ref passed">60</div>
+    <div class="step-container" id="0.61">
+      <div class="step-ref passed">61</div>
       
       <div class="step-cell passed">
         <span>And</span>&nbsp;<span>request</span>
@@ -861,7 +751,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
    
   
-  <div class="preformatted" data-parent="0.60">{
+  <div class="preformatted" data-parent="0.61">{
   &quot;value&quot;: 99.99,
   &quot;initDate&quot;: &quot;2025-01-01&quot;,
   &quot;endDate&quot;: &quot;2024-06-30&quot;
@@ -881,8 +771,141 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   
 
   <div class="step-row">
-    <div class="step-container" id="0.68">
-      <div class="step-ref passed">68</div>
+    <div class="step-container" id="0.69">
+      <div class="step-ref passed">69</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method post</span>
+      </div>
+    </div>
+    <div class="time-cell passed">36</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.70">
+      <div class="step-ref passed">70</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 400</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[4:73]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[4:73]</span>
+                <span class="scenario-name">Get Prices</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>97</span>
+            </div>
+          </div>
+          
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.74">
+      <div class="step-ref passed">74</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>url &#39;http://localhost:8080/products&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.75">
+      <div class="step-ref passed">75</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  <div class="preformatted" data-parent="0.75">{
+    &quot;name&quot;: &quot;Zapatos deportivos&quot;,
+    &quot;description&quot;: &quot;Calzado cómodo para correr&quot;
+}</div>
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.82">
+      <div class="step-ref passed">82</div>
       
       <div class="step-cell passed">
         <span>When</span>&nbsp;<span>method post</span>
@@ -897,25 +920,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.68">09:01:20.551 request:
-2 &gt; POST http://localhost:8080/products/8c310d29-e2aa-4856-b6d0-3d34e19283ed/prices
-2 &gt; Content-Type: application/json; charset=UTF-8
-2 &gt; Content-Length: 62
-2 &gt; Host: localhost:8080
-2 &gt; Connection: Keep-Alive
-2 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/17)
-2 &gt; Accept-Encoding: gzip,deflate
-{&quot;value&quot;:99.99,&quot;initDate&quot;:&quot;2025-01-01&quot;,&quot;endDate&quot;:&quot;2024-06-30&quot;}
-
-09:01:20.558 response time in milliseconds: 7
-2 &lt; 400
-2 &lt; Content-Type: application/json
-2 &lt; Transfer-Encoding: chunked
-2 &lt; Date: Mon, 06 Oct 2025 07:01:19 GMT
-2 &lt; Connection: close
-{&quot;timestamp&quot;:&quot;2025-10-06T07:01:20.555+00:00&quot;,&quot;status&quot;:400,&quot;error&quot;:&quot;Bad Request&quot;,&quot;path&quot;:&quot;/products/8c310d29-e2aa-4856-b6d0-3d34e19283ed/prices&quot;}
-
-</div>   
+     
 
   
 
@@ -927,14 +932,414 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   
 
   <div class="step-row">
-    <div class="step-container" id="0.69">
-      <div class="step-ref passed">69</div>
+    <div class="step-container" id="0.83">
+      <div class="step-ref passed">83</div>
       
       <div class="step-cell passed">
-        <span>Then</span>&nbsp;<span>status 400</span>
+        <span>Then</span>&nbsp;<span>status 201</span>
       </div>
     </div>
     <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.84">
+      <div class="step-ref passed">84</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>def productId = response.id</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.86">
+      <div class="step-ref passed">86</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>url &#39;http://localhost:8080/products/&#39;+productId+&#39;/prices&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.87">
+      <div class="step-ref passed">87</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  <div class="preformatted" data-parent="0.87">{
+    &quot;value&quot;: 99.99,
+    &quot;initDate&quot;: &quot;2024-01-01&quot;,
+    &quot;endDate&quot;: &quot;2024-06-30&quot;
+}</div>
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.95">
+      <div class="step-ref passed">95</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method post</span>
+      </div>
+    </div>
+    <div class="time-cell passed">8</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.96">
+      <div class="step-ref passed">96</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.97">
+      <div class="step-ref passed">97</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>url &#39;http://localhost:8080/products/&#39;+productId+&#39;/prices&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.98">
+      <div class="step-ref passed">98</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  <div class="preformatted" data-parent="0.98">{
+  &quot;value&quot;: 66.66,
+  &quot;initDate&quot;: &quot;2024-06-30&quot;,
+  &quot;endDate&quot;: &quot;2024-12-31&quot;
+}</div>
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.106">
+      <div class="step-ref passed">106</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method post</span>
+      </div>
+    </div>
+    <div class="time-cell passed">8</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.107">
+      <div class="step-ref passed">107</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.110">
+      <div class="step-ref passed">110</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>url &#39;http://localhost:8080/products/&#39;+productId+&#39;/prices&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.111">
+      <div class="step-ref passed">111</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>param date = &#39;2024-04-15&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.112">
+      <div class="step-ref passed">112</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method GET</span>
+      </div>
+    </div>
+    <div class="time-cell passed">43</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.113">
+      <div class="step-ref passed">113</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.114">
+      <div class="step-ref passed">114</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response.value == 99.99</span>
+      </div>
+    </div>
+    <div class="time-cell passed">26</div>
   </div>
 
    

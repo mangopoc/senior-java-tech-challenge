@@ -32,7 +32,7 @@ public class ProductUseCasesImpl implements CreateProductUseCase, AddPriceToProd
 
     @Override
     public Price findPriceAtDate(UUID id, LocalDate date) {
-        return null;
+        return persistencePort.findPriceAtDate(id,date);
     }
 }
 

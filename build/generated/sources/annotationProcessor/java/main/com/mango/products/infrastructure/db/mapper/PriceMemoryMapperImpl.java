@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2025-10-06T08:59:41+0200",
+    date = "2025-10-07T22:07:26+0200",
     comments = "version: 1.5.5.Final, compiler: IncrementalProcessingEnvironment from gradle-language-java-7.6.jar, environment: Java 17 (Oracle Corporation)"
 )
 @Component
@@ -21,7 +21,10 @@ public class PriceMemoryMapperImpl implements PriceMemoryMapper {
 
         PriceMemoryEntity priceMemoryEntity = new PriceMemoryEntity();
 
+        priceMemoryEntity.setValue( domain.getValue() );
         priceMemoryEntity.setCurrency( domain.getCurrency() );
+        priceMemoryEntity.setInitDate( domain.getInitDate() );
+        priceMemoryEntity.setEndDate( domain.getEndDate() );
 
         return priceMemoryEntity;
     }
@@ -34,7 +37,10 @@ public class PriceMemoryMapperImpl implements PriceMemoryMapper {
 
         Price price = new Price();
 
+        price.setValue( entity.getValue() );
         price.setCurrency( entity.getCurrency() );
+        price.setInitDate( entity.getInitDate() );
+        price.setEndDate( entity.getEndDate() );
 
         return price;
     }

@@ -1,6 +1,7 @@
 package com.mango.products.infrastructure.db.adapter;
 
 import com.mango.products.application.port.PersistencePort;
+import com.mango.products.domain.Price;
 import com.mango.products.domain.Product;
 import com.mango.products.infrastructure.db.entity.ProductMemoryEntity;
 import com.mango.products.infrastructure.db.mapper.PriceMemoryMapper;
@@ -8,13 +9,34 @@ import com.mango.products.infrastructure.db.mapper.ProductMemoryMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.*;
+import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.stream.Collectors;
 
 @Component
 public class MemoryPersistencyAdapter implements PersistencePort {
     private static Map<UUID, List<ProductMemoryEntity>> products = new HashMap<>();
+
+    public static List<ProductMemoryEntity> getProductsHistory(UUID id) {
+
+        synchronized (products.get(id)) {
+            products.get(id).sort((o1, o2) -> {
+
+                int comparable = 0;
+                if (o2.getPrice() == null) {
+                    comparable = -1;
+                } else if (o1.getPrice() == null) {
+                    comparable = 1;
+                } else {
+                    comparable = o2.getPrice().getInitDate().compareTo(o1.getPrice().getInitDate());
+                }
+                return comparable;
+            });
+        }
+        return products.get(id);
+    }
 
     @Autowired
     private ProductMemoryMapper productMapper;
@@ -27,7 +49,7 @@ public class MemoryPersistencyAdapter implements PersistencePort {
         product.setActive(true);
         product.setCreatedAt(LocalDateTime.now());
         product.setVersion(1);
-        List<ProductMemoryEntity> versions = new ArrayList<>();
+        List<ProductMemoryEntity> versions = new CopyOnWriteArrayList<>();
         versions.add(productMapper.toEntity(product));
         products.put(product.getId(), versions);
         return product;
@@ -35,7 +57,7 @@ public class MemoryPersistencyAdapter implements PersistencePort {
 
     @Override
     public void update(Product product) {
-        List<ProductMemoryEntity> productHistory = products.get(product.getId());
+        List<ProductMemoryEntity> productHistory = getProductsHistory(product.getId());
 
         if (productHistory != null && !productHistory.isEmpty()) {
             ProductMemoryEntity storeProduct = productHistory.get(productHistory.size() - 1);
@@ -67,7 +89,7 @@ public class MemoryPersistencyAdapter implements PersistencePort {
 
     @Override
     public Product findById(UUID id) {
-                List<ProductMemoryEntity> history = products.get(id);
+        List<ProductMemoryEntity> history = getProductsHistory(id);
 
         Product domainProduct = null;
         if (history != null && !history.isEmpty()) {
@@ -77,5 +99,22 @@ public class MemoryPersistencyAdapter implements PersistencePort {
         }
         return domainProduct;
 
+    }
+
+    @Override
+    public Price findPriceAtDate(UUID id, LocalDate date) {
+        ProductMemoryEntity productWithPriceToReturn = null;
+        List<ProductMemoryEntity> productHistory = getProductsHistory(id);
+
+        Iterator<ProductMemoryEntity> it = productHistory.iterator();
+        boolean found = false;
+        while (it.hasNext() && !found) {
+            ProductMemoryEntity item = it.next();
+            found = date != null && item.getPrice() != null && item.getPrice().getInitDate().isBefore(date);
+            if (found) {
+                productWithPriceToReturn = item;
+            }
+        }
+        return productWithPriceToReturn != null ? priceMapper.toDomain(productWithPriceToReturn.getPrice()):null;
     }
 }
