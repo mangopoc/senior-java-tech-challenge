@@ -3,10 +3,17 @@ management:
   endpoints:
     web:
       exposure:
-        include: "*"
+        include: health,info,prometheus
   endpoint:
     health:
-      show-details: always
+      show-details: ALWAYS
+    prometheus:
+      enabled: true
+  metrics:
+    export:
+      prometheus:
+        enabled: true
+
 
 logging:
   level:
