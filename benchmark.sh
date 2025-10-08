@@ -1,6 +1,7 @@
 #!/bin/bash
 
-BASE_URL="http://product-api:8080"
+#BASE_URL="http://product-api:8080"
+BASE_URL="http://localhost:8080"
 HEALTH_ENDPOINT="$BASE_URL/actuator/health"
 
 echo "Esperando a que la API esté lista en $HEALTH_ENDPOINT..."

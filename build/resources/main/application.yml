@@ -14,4 +14,7 @@ logging:
     com.mango: INFO
   pattern:
     console: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+spring:
+  jackson:
+    time-zone: Europe/Madrid
 
